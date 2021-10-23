@@ -1,0 +1,13 @@
+<p>maquina works!</p>
+
+<div>
+
+    <button [disabled]="!abrirObjetoA" (click)="recuperaDoceA()">Doce A</button>
+    <button [disabled]="!abrirObjetoB" (click)="recuperaDoceB()">Doce B</button>
+    <button [disabled]="!abrirObjetoC" (click)="recuperaDoceC()">Doce C</button>
+
+    <p>Valor aculado: R$ {{valorTotal}},00</p>
+    <button (click)="adicionaUm()">Um</button>
+    <button (click)="adicionaDois()">Dois</button>
+    <button (click)="adicionaCinco()">Cinco</button>
+</div>
