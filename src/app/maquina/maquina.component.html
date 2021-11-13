@@ -1,13 +1,36 @@
-<p>maquina works!</p>
 
-<div>
+<div class="container">
 
-    <button [disabled]="!abrirObjetoA" (click)="recuperaDoceA()">Doce A</button>
-    <button [disabled]="!abrirObjetoB" (click)="recuperaDoceB()">Doce B</button>
-    <button [disabled]="!abrirObjetoC" (click)="recuperaDoceC()">Doce C</button>
-
-    <p>Valor aculado: R$ {{valorTotal}},00</p>
-    <button (click)="adicionaUm()">Um</button>
-    <button (click)="adicionaDois()">Dois</button>
-    <button (click)="adicionaCinco()">Cinco</button>
+    <div class="maquina">
+        <div class="produto">
+            <img class="imgDoces espacoImagens" src="https://i.postimg.cc/sXLW68SS/1554318518-REGULARCHOCOLATE.png" alt="doceA">
+            <button [disabled]="!abrirObjetoA" (click)="recuperaDoceA()">
+                <p class="digito">R$ 6,00</p>
+            </button>
+            <img class="imgDoces" src="https://i0.wp.com/delibe.com.br/wp-content/uploads/2021/06/CHOCOLATE-AO-LEITE-DIAMANTE-NEGRO-TAMANHO-FAMILIA-LACTA-165-G.png" alt="doceB">  
+            <button [disabled]="!abrirObjetoB" (click)="recuperaDoceB()">
+                <p class="digito">R$ 7,00</p>
+            </button>
+            <img class="imgDoces espacoImagens" src=" https://cdn-veloxcode.s3.sa-east-1.amazonaws.com/banco-de-imagens/qHxG78tFn65C3BjLxo5FmsC0935qLewHb0UV0gOr.png" alt="doceC">
+            <button [disabled]="!abrirObjetoC" (click)="recuperaDoceC()">
+                <p class="digito">R$ 8,00</p>
+            </button>
+        </div>
+    
+        <div class="opcoes">
+            <p>Insira um valor</p>
+            <button [disabled]="this.desabilitaA" (click)="adicionaUm()">1</button>
+            <button [disabled]="this.desabilitaB" (click)="adicionaDois()">2</button>
+            <button [disabled]="this.desabilitaC" (click)="adicionaCinco()">5</button>
+            <div class="valorAcumulado">
+                <p>Valor acumulado</p>
+                <div>
+                    <p class="digito">{{valorTotal}},00</p>
+                </div>
+            </div>
+            <div class="alerta">
+                <p>ATENÇÃO: Valor maximo de R$ 9,00</p>
+            </div>
+        </div>
+    </div>
 </div>
